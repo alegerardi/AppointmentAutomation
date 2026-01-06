@@ -85,14 +85,14 @@ def get_dynamic_available_times(business_id, bookings, date_str, duration, inter
     for b in bookings:
         if b["date"] == date_str:
             b_start = datetime.strptime(b["time"], fmt)
-            b_duration = b.get("duration", 30)  # default 30 min se não existir (retrocompatível)
+            b_duration = b.get("duration", 30)  # default 30 min if not present
             booked_slots.append((b_start, b_duration))
 
     curr = work_start
     available = []
     step = timedelta(minutes=interval)
     while curr + timedelta(minutes=duration) <= work_end:
-        # Fora do horário de almoço?
+        # outside lunch time
         in_lunch = (curr >= lunch_start and curr < lunch_end) or (curr + timedelta(minutes=duration) > lunch_start and curr < lunch_end)
         if not in_lunch:
             collides = False
