@@ -4,18 +4,18 @@ The project emphasizes business logic, stateful conversations, and API integrati
 
 Features:
 
-WhatsApp-based booking flow with state management
+WhatsApp-based booking flow with state management,
 Service selection, date and time handling
-Dynamic availability calculation
-Persistent booking storage
-Owner notification on booking confirmation
+Dynamic availability calculation,
+Persistent booking storage,
+Owner notification on booking confirmation,
 Authenticated admin dashboard with session-based access control
 
 Tech Stack:
 
-Python, Flask
-Twilio WhatsApp API
-Local database persistence (prototype)
+Python, Flask,
+Twilio WhatsApp API,
+Local database persistence (prototype),
 Minimal HTML templates for admin dashboard
 
 Architecture:
