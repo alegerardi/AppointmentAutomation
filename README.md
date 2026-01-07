@@ -29,8 +29,3 @@ Project Status:
 Functional backend prototype with working WhatsApp integration and dashboard.
 Runs locally and is exposed during development for webhook testing.
 Not deployed to a permanent production server.
-
-Running Locally:
-
-Install dependencies and configure Twilio credentials.
-Start the application with:
